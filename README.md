@@ -82,7 +82,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: clj-kondo
-        uses: nnichols/clojure-lint-action@v1
+        uses: splashfinancial/clojure-lint-action@TODO
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review # Change reporter.
