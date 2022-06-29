@@ -12,14 +12,14 @@ files=$(find "${INPUT_PATH}" \
              -name "${INPUT_PATTERN}")
 
 clj-kondo \
-    --lint "$files" \
-    --config "${INPUT_CLJ_KONDO_CONFIG}" \
-    --config '{:output {:pattern "{{filename}}:{{row}}:{{col}}: {{message}}"}}' \
-    | reviewdog \
-          -efm="%f:%l:%c: %m" \
-          -name="clj-kondo" \
-          -reporter="${INPUT_REPORTER}" \
-          -filter-mode="${INPUT_FILTER_MODE}" \
-          -fail-on-error="${INPUT_FAIL_ON_ERROR}" \
-          -level="${INPUT_LEVEL}" \
-          "${INPUT_REVIEWDOG_FLAGS}"
+  --lint "$files" \
+  --config "${INPUT_CLJ_KONDO_CONFIG}" \
+  --config '{:output {:pattern "{{filename}}:{{row}}:{{col}}: {{message}}"}}' \
+  | reviewdog \
+      -efm="%f:%l:%c: %m" \
+      -name="clj-kondo" \
+      -reporter="${INPUT_REPORTER}" \
+      -filter-mode="${INPUT_FILTER_MODE}" \
+      -fail-on-error="${INPUT_FAIL_ON_ERROR}" \
+      -level="${INPUT_LEVEL}" \
+      "${INPUT_REVIEWDOG_FLAGS}"
