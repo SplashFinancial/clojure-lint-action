@@ -1,6 +1,9 @@
 # Clojure Lint Action
 
-A simple GitHub Action to lint clojure files with [clj-kondo](https://github.com/clj-kondo/clj-kondo) and [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to improve the code review experience.
+A simple GitHub Action to lint clojure files with [clj-kondo][clj-kondo] and [reviewdog][reviewdog] on pull requests to improve the code review experience.
+
+[clj-kondo]: https://github.com/clj-kondo/clj-kondo
+[reviewdog]: https://github.com/reviewdog/reviewdog
 
 ## Inputs
 
@@ -80,12 +83,12 @@ jobs:
     name: runner / clj-kondo
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: clj-kondo
-        uses: splashfinancial/clojure-lint-action@TODO
+        uses: splashfinancial/clojure-lint-action@master
         with:
           github_token: ${{ secrets.github_token }}
-          reporter: github-pr-review # Change reporter.
+          reporter: github-pr-review
 ```
 
 ## Licensing
