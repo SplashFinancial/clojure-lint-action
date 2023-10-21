@@ -53,7 +53,7 @@ Default: `.`
 Optional.
 File patterns of target files.
 Same as `-name [pattern]` of `find` command.
-Default: `*.clj,*.cljc,*.cljs,*.cljx`
+Default: `*.clj`
 
 ### `exclude`
 
