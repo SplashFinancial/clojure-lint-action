@@ -9,6 +9,7 @@ export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 clj-kondo --lint $(find "${INPUT_PATH}" -not -path "${INPUT_EXCLUDE}" -type f -name "${INPUT_PATTERN}") \
   --config "${INPUT_CLJ_KONDO_CONFIG}" \
   --config '{:output {:pattern "{{filename}}:{{row}}:{{col}}: {{message}}"}}' \
+  --parallel \
   | reviewdog \
       -efm="%f:%l:%c: %m" \
       -name="clj-kondo" \
