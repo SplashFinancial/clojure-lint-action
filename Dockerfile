@@ -1,4 +1,4 @@
-FROM cljkondo/clj-kondo
+FROM cljkondo/clj-kondo:2026.01.19
 
 ENV REVIEWDOG_VERSION=v0.12.0
 
