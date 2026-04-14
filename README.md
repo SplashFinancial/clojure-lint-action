@@ -80,9 +80,9 @@ jobs:
     name: runner / clj-kondo
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v6
       - name: clj-kondo
-        uses: splashfinancial/clojure-lint-action@TODO
+        uses: splashfinancial/clojure-lint-action@v1.0.2
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review # Change reporter.
