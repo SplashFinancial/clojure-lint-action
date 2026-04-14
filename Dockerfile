@@ -1,4 +1,4 @@
-FROM cljkondo/clj-kondo:2026.01.19
+FROM 941333304678.dkr.ecr.us-east-1.amazonaws.com/docker-hub/cljkondo/clj-kondo:2026.01.19
 
 ENV REVIEWDOG_VERSION=v0.12.0
 
